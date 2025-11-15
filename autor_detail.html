@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ autor.nome }}</h2>
+<p><strong>E-mail:</strong> {{ autor.email }}</p>
+<p><strong>Mini currículo:</strong> {{ autor.mini_curriculo }}</p>
+<a href="{% url 'autor_update' autor.pk %}" class="btn btn-primary">Editar</a>
+<a href="{% url 'autor_list' %}" class="btn btn-secondary">Voltar</a>
+{% endblock %}

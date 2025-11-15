@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h1>Autores</h1>
+  <a class="btn btn-success" href="{% url 'autor_create' %}">Novo Autor</a>
+</div>
+<form method="get" class="mb-3">
+  <div class="input-group">
+    <input type="text" name="q" value="{{ q }}" class="form-control" placeholder="Buscar por nome ou e-mail...">
+    <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+  </div>
+</form>
+<table class="table table-striped">
+  <thead><tr><th>Nome</th><th>E-mail</th><th>Criado</th><th>Ações</th></tr></thead>
+  <tbody>
+    {% for autor in autores %}
+    <tr>
+      <td><a href="{% url 'autor_detail' autor.pk %}">{{ autor.nome }}</a></td>
+      <td>{{ autor.email }}</td>
+      <td>{{ autor.criado_em|date:"Y-m-d H:i" }}</td>
+      <td>
+        <a class="btn btn-sm btn-primary" href="{% url 'autor_update' autor.pk %}">Editar</a>
+        <a class="btn btn-sm btn-danger" href="{% url 'autor_delete' autor.pk %}">Apagar</a>
+      </td>
+    </tr>
+    {% empty %}
+    <tr><td colspan="4">Nenhum autor cadastrado.</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
