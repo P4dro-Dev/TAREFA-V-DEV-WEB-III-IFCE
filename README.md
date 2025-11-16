@@ -25,6 +25,7 @@ Além disso, cumprir os requisitos do Git: criação da branch banco-de-dados, c
 ```
 studytasks_project/
 │
+├── Relatório_PDF_IMG's+Descrição+ID
 ├── coreapp/
 │   ├── models.py
 │   ├── views.py
