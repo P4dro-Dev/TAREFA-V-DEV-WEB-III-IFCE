@@ -1,4 +1,4 @@
-## 📘 StudyTasks — Sistema Django com Banco de Dados (Tarefa 5)
+##  📋| StudyTasks — Sistema Django com Banco de Dados (Tarefa 5)
 
 Este repositório contém uma aplicação web desenvolvida em Django, implementando um sistema completo de gerenciamento de autores com mapeamento objeto-relacional (ORM). O projeto cumpre todos os requisitos solicitados na atividade, incluindo criação de modelo, CRUD, buscas, templates, admin, branch Git e documentação.
 
