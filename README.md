@@ -45,9 +45,8 @@ studytasks_project/
 │   └── wsgi.py
 │
 ├── manage.py
-├── requirements.txt
 ├── README.md
-└── report.pdf
+
 ```
 
 ## 🧩 Modelo de Dados
